@@ -74,7 +74,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          bundleIdentifier: pzzld.eth.app,
+          bundleIdentifier: puzzled,
           releaseId: ${{ needs.constructor.outputs.release_id }}
   pre-release:
     needs: [ builder, constructor ]
@@ -88,7 +88,7 @@ jobs:
         with:
           script: |
             github.rest.repos.updateRelease({
-              bundleIdentifier: pzzld.eth.app,
+              bundleIdentifier: puzzled,
               draft: false,
               prerelease: true,
               owner: context.repo.owner,
