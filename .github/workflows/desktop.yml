@@ -4,6 +4,12 @@ env:
   NODE_VERSION: 18
 
 on:
+  pull_request:
+    branches: [ "main", "master", "prod*" ]
+    tags: [ "v*.*.*" ]
+  push:
+    branches: [ "main", "master", "prod*" ]
+    tags: [ "v*.*.*" ]
   workflow_dispatch:
     inputs:
       environment:
@@ -56,7 +62,7 @@ jobs:
       - name: langspace
         run: |
           rustup default nightly
-          rustup target add wasm32-unknown-uknown --toolchain nightly
+          rustup target add wasm32-unknown-unknown wasm32-wasi --toolchain nightly
           npm install -g wasm-pack
       - name: configure environment (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
