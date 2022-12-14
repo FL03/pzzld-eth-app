@@ -30,7 +30,6 @@ jobs:
           script: |
             const { data } = await github.rest.repos.createRelease({
               body: 'View the assets bundled below to find a suitable installer for your host system',
-              configPath: 'desktop/tauri.conf.json',
               draft: true,
               name: `v${process.env.PACKAGE_VERSION}`,
               owner: context.repo.owner,
