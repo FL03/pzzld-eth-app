@@ -65,6 +65,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          bundleIdentifier: pzzld.eth.app,
           releaseId: ${{ needs.constructor.outputs.release_id }}
   pre-release:
     needs: [ builder, constructor ]
