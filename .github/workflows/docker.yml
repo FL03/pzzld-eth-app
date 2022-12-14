@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: scsys/proton
+  IMAGE: jo3mccain/pzzld-eth-app
   IMAGE_TAG: latest
 
 jobs:

@@ -1,13 +1,13 @@
-# template-sveltekit-rust
+# pzzld-eth-app
 
-[![Clippy](https://github.com/FL03/template-sveltekit-rust/actions/workflows/clippy.yml/badge.svg)](https://github.com/FL03/template-sveltekit-rust/actions/workflows/clippy.yml)
-[![Desktop](https://github.com/FL03/template-sveltekit-rust/actions/workflows/desktop.yml/badge.svg)](https://github.com/FL03/template-sveltekit-rust/actions/workflows/desktop.yml)
-[![Docker](https://github.com/FL03/template-sveltekit-rust/actions/workflows/docker.yml/badge.svg)](https://github.com/FL03/template-sveltekit-rust/actions/workflows/docker.yml)
-[![Rust](https://github.com/FL03/template-sveltekit-rust/actions/workflows/rust.yml/badge.svg)](https://github.com/FL03/template-sveltekit-rust/actions/workflows/rust.yml)
+[![Clippy](https://github.com/FL03/pzzld-eth-app/actions/workflows/clippy.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/clippy.yml)
+[![Desktop](https://github.com/FL03/pzzld-eth-app/actions/workflows/desktop.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/desktop.yml)
+[![Docker](https://github.com/FL03/pzzld-eth-app/actions/workflows/docker.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/docker.yml)
+[![Rust](https://github.com/FL03/pzzld-eth-app/actions/workflows/rust.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/rust.yml)
 
 ***
 
-Proton is a cloud-native platform manifesting the active decentralized namespace into a unique experience empowering everyday users to make use of blockchain technologies.
+pzzld-eth-app
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ Make sure you have rust installed on your host system
 #### *Clone the repository*
 
 ```bash
-git clone https://github.com/FL03/template-sveltekit-rust
+git clone https://github.com/FL03/pzzld-eth-app
 ```
 
 #### *Setup the environment*
@@ -40,19 +40,19 @@ Make sure you have docker installed on the target system
 #### *Pull the image*
 
 ```bash
-docker pull jo3mccain/template-sveltekit-rust:latest
+docker pull jo3mccain/pzzld-eth-app:latest
 ```
 
 #### *Build the image locally (optional)*
 
 ```bash
-docker buildx build --tag jo3mccain/template-sveltekit-rust:latest .
+docker buildx build --tag pzzld-eth-app:latest .
 ```
 
 #### *Run the image*
 
 ```bash
-docker run -p 9000:9000 jo3mccain/template-sveltekit-rust:latest
+docker run -p 3000:3000 jo3mccain/pzzld-eth-app:latest
 ```
 
 ## Usage

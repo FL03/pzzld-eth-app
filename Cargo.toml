@@ -2,7 +2,7 @@
 default-members = [
     "wasm"
 ]
-exclude = []
+exclude = [ "xtask" ]
 members = [
     "wasm",
 ]

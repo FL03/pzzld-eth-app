@@ -14,9 +14,9 @@ pub fn new() -> CommandLineInterface {
 
 pub(crate) mod interface {
     use super::Commands;
+    use crate::BoxResult;
     use clap::Parser;
-    use proton_sdk::prelude::BoxResult;
-
+    
     #[derive(Clone, Debug, Hash, Parser, PartialEq)]
     #[clap(about, author, version)]
     #[clap(long_about = None)]

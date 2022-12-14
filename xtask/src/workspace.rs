@@ -7,13 +7,16 @@ use std::path::PathBuf;
 
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct Workspace {
+    pub artifacts: PathBuf,
     pub root: PathBuf,
+    
 }
 
 impl Workspace {
-    pub fn new() -> Self {
+    pub fn new(artifacts: Option<PathBuf>) -> Self {
         let root = crate::project_root();
-        Self { root }
+        let artifacts = artifacts.unwrap_or_else(|| root.clone().join(".artifacts"));
+        Self { artifacts, root }
     }
     ///
     pub fn root(&self) -> PathBuf {
@@ -28,6 +31,6 @@ impl Workspace {
 
 impl Default for Workspace {
     fn default() -> Self {
-        Self::new()
+        Self::new(None)
     }
 }
