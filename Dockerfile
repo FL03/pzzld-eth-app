@@ -38,8 +38,6 @@ CMD [ "npm", "run", "start" ]
 
 FROM node:lts-alpine as runner
 
-RUN apt-get update -y && apt-get upgrade -y
-
 COPY --chown=55 --from=builder /workspace/.artifacts/dist ./dist
 VOLUME [ "dist" ]
 
