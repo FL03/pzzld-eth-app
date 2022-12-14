@@ -28,9 +28,7 @@ jobs:
           rustup target add wasm32-unknown-unknown --toolchain nightly
           npm install -g wasm-pack
       - name: build
-        run: cargo build --workspace --release --target wasm32-unknown-unknown && npm run build
-      - name: test
-        run: npm run test
+        run: wasm-pack build wasm --target web
   apps:
     if: ${{ github.event.inputs.publish }}
     name: Publish
