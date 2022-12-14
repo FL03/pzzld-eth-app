@@ -38,8 +38,9 @@ CMD [ "npm", "run", "start" ]
 
 FROM node:lts-alpine as runner
 
-COPY --chown=55 --from=builder /workspace/.artifacts/dist ./dist
-VOLUME [ "dist" ]
+COPY --chown=55 --from=builder /workspace/build ./dist/build
+COPY --chown=55 --from=builder /workspace/wasm/pkg ./dist/wasm
+VOLUME [ "/dist" ]
 
 FROM runner
 
