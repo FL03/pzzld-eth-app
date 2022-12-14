@@ -1,0 +1,11 @@
+{
+  	"name": "@template/wasm",
+	"scripts": {
+		"build": "wasm-pack build --target web",
+		"install": "npm install -g wasm-pack",
+		"package": "wasm-pack pack",
+		"preinstall": "rustup default nightly && rustup target add wasm32-unknown-unknown wasm32-wasi --toolchain nightly",
+		"test": "wasm-pack test --node"
+	},
+	"type": "commonjs"
+}

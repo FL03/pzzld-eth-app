@@ -1,0 +1,57 @@
+{
+	"author": "FL03 <jo3mccain@icloud.com> (https://github.com/FL03)",
+	"bugs": "https://github.com/scattered-systems/proton/issues",	
+	"dependencies": {
+		"@ensdomains/ensjs": "latest",
+		"cookie": "latest",
+		"dotenv": "latest",
+		"svelte-web3": "latest"
+	},
+	"description": "Proton",
+	"devDependencies": {
+		"@bytemd/plugin-gfm": "latest",
+		"@fontsource/fira-mono": "latest",
+		"@neoconfetti/svelte": "latest",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-cloudflare": "next",
+		"@sveltejs/adapter-node": "next",
+		"@sveltejs/adapter-vercel": "next",
+		"@sveltejs/kit": "next",
+		"@sveltejs/package": "next",
+		"@tailwindcss/forms": "latest",
+		"@tailwindcss/typography": "latest",
+		"autoprefixer": "latest",
+		"bytemd": "latest",
+		"svelte": "latest",
+		"svelte-check": "latest",
+		"svelte-preprocess": "latest",
+		"tailwindcss": "latest",
+		"vite": "^4.0.0",
+		"vite-plugin-wasm-pack": "latest"
+	},
+	"keywords": [],
+	"homepage": "https://github.com/FL03/template-sveltekit-wasm/wiki",
+	"license": "Apache-2.0",
+	"name": "@template/template-sveltekit-wasm",
+	"readme": "https://github.com/FL03/template-sveltekit-wasm/#README",
+  	"repository": "https://github.com/FL03/template-sveltekit-wasm",
+	"scripts": {
+		"build": "npm run wasm:build && vite build",
+		"check": "svelte-kit sync && svelte-check",
+		"check:watch": "svelte-kit sync && svelte-check --watch",
+		"dev": "npm run wasm:build && vite dev",
+		"package": "svelte-kit package",
+		"prestart": "npm run wasm:build",
+		"preview": "vite preview",
+		"start": "node build/index.js",
+		"test": "npm run wasm:test",
+		"wasm:build": "npm run build --workspace=@template/wasm",
+		"wasm:install": "npm install --workspace=@template/wasm",
+		"wasm:test": "wasm-pack test --node wasm"
+	},
+	"type": "module",
+	"version": "0.1.0",
+	"workspaces": [
+		"wasm"
+	]
+}

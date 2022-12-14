@@ -1,0 +1,3 @@
+tasks:
+  - init: cp .env.example .env && cargo xtask --desktop setup ubuntu
+    command: cargo xtask start
