@@ -1,11 +1,11 @@
 <script>
-    import { SidebarToggle } from '$lib';
-    import SearchBtn from './SearchBtn.svelte';
-    import ToolbarLinks from './ToolbarLinks.svelte';
+    import { Searchbar, SidebarToggle } from '$lib/nav';
 
+    
+    import { page } from '$app/stores';
     export let linktree = [];
-    let search = "";
     export let sidebar = false;
+    let search = "";
 
     export let align = {
         items: "items-center",
@@ -24,16 +24,24 @@
 </script>
 
 <div class="flex flex-nowrap {align.items} {align.justify} {bg} {color} {dim.h} {dim.w} {dim.z} {m} {pd} {position}">
-    <div class="divide-x flex flex-nowrap grow">
-        <div class="px-3 items-center hidden sm:flex">
+    <div class="divide-x flex grow">
+        <div class="px-3 items-center hidden lg:flex">
             <SidebarToggle bind:open={sidebar}/>
         </div>
-        
-        <div class="px-3 items-center hidden lg:flex">
-            <ToolbarLinks links={linktree}/>
+        <div class="flex grow items-center justify-start p-3">
+            <ul class="flex grow items-center justify-start list-none hidden lg:flex">
+                {#each linktree as view}
+                    <li class:active={$page.url.pathname === view.href}>
+                        <a class="flex px-3 py-2 hover:opacity-75 hover:italic hover:underline" sveltekit:prefetch href="{view.href}">
+                            {view.label}
+                        </a>
+                    </li>
+                {/each}
+            </ul>
         </div>
+        
     </div>
-    <SearchBtn bg="bg-gradient-to-r from-cyan-700 via-cyan-500 to-cyan-900" color={color} bind:query={search}/>
+    <Searchbar bg="bg-gradient-to-r from-cyan-700 via-cyan-500 to-cyan-900" color={color} bind:query={search}/>
 </div>
 
 <style>

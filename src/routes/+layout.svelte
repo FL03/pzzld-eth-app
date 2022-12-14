@@ -9,6 +9,10 @@
 	]
 </script>
 
+<Sidebar bind:open>
+	Control Center
+</Sidebar>
+
 <div class="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 flex flex-col items-center justify-center m-0 p-0 z-0 min-h-screen min-w-full max-w-screen" id="base">
 	<Navbar name={"Puzzled"}>
 		<WalletToggle/>
@@ -23,11 +27,6 @@
 		bind:sidebar={open}
 	/>
 </div>
-
-<Sidebar bind:open>
-	Control Center
-</Sidebar>
-
 
 <style>
 	

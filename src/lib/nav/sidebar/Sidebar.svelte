@@ -1,33 +1,33 @@
 <script>
+    import { page } from '$app/stores';
+    import { ProfileCard } from "$lib";
     export let open = false;
     export let title = "Controls";
-
-    import { List, ProfileCard } from "$lib";
-	
+	export const links = [["settings", "/settings"]];
 </script>
 
 
-<aside class="absolute bg-zinc-700 text-white flex max-w-md w-full items-center justify-between h-full opacity-95 top-0 z-40 py-24" class:open>
+<aside class="absolute bg-zinc-700 text-white flex max-w-md w-full items-center justify-between h-full opacity-95 top-0 py-24 shadow-lg" class:open>
     <div class="flex flex-col justify-between h-full w-full">
+        <div class="flex items-center justify-center p-3">
+           <ProfileCard/>
+        </div>
         <div class="divide-y h-full">
             <div class="flex p-3 mx-auto items-center justify-center">
                 {title}
             </div>
             <div class="flex p-3 mx-auto items-center justify-start">
-                <List props="flex flex-col lg:flex-row list-none">
-                    <li>
-                        <a class="" href="/settings" sveltekit:prefetch>
-                            Settings
-                        </a>
-                    </li>
-                </List>
+                <ul class="flex flex-col lg:flex-row list-none">
+                    {#each links as view}
+                        <li class:active={$page.url.pathname === view[1]}>
+                            <a class="block px-3 py-2 hover:opacity-75 hover:italic" sveltekit:prefetch href="{view[1]}">
+                                {view[0]}
+                            </a>
+                        </li>
+                    {/each}
+                </ul>
             </div>
-            <div class="flex p-3">
-                <ProfileCard/>
-            </div>
-            
         </div>
-        
     </div>
 </aside>
 

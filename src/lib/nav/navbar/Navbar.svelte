@@ -10,7 +10,8 @@
   <NavLogo logo={favicon}>
     {name}
   </NavLogo>
-  <div class="lg:flex grow items-center justify-start sm:hidden xs:hidden" id="main-menu">
+  <div class="flex grow items-center justify-start p-3" id="main-menu">
+    
     <Navlink links={links}/>
   </div>
   <div class="justify-end">
