@@ -75,6 +75,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           bundleIdentifier: puzzled
+          distDir: build
           releaseId: ${{ needs.constructor.outputs.release_id }}
   pre-release:
     needs: [ builder, constructor ]
