@@ -38,3 +38,9 @@ pub fn greet(name: &str) {
 pub fn add_one(data: usize) -> usize {
     data + 1
 }
+
+pub struct ERC721 {
+    pub name: String,
+    pub symbol: String,
+    pub total_supply: usize
+}
