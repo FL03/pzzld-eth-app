@@ -38,6 +38,7 @@ CMD [ "npm", "run", "start" ]
 
 FROM node:lts-alpine as runner
 
+COPY --chown=55 --from=builder /workspace/package.json ./dist/package.json
 COPY --chown=55 --from=builder /workspace/build ./dist/build
 COPY --chown=55 --from=builder /workspace/wasm/pkg ./dist/wasm
 VOLUME [ "/dist" ]
@@ -47,4 +48,4 @@ FROM runner
 ENV MODE="production"
 
 EXPOSE 3000
-CMD ["node", "dist/build/index.js"]
+CMD ["npm", "run", "start"]

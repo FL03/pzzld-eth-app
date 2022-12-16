@@ -34,7 +34,7 @@ pub fn greet(name: &str) {
     alert(&format!("Hello,{}!", name));
 }
 
-
-pub fn coinbase_api() {
-
+#[wasm_bindgen]
+pub fn add_one(data: usize) -> usize {
+    data + 1
 }

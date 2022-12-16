@@ -1,12 +1,10 @@
 <script>
-    import { fetch } from 'wasm/wasm';
-    import { onMount } from 'svelte';
+    import { fetch, greet, add_one } from 'wasm/wasm';
 
-    onMount(() => {
-        console.log('init wasm-pack');
-        greet('From svelte-kit');
-    })
-    
+    let value = 0;
+    function handle_click() {
+        value = add_one(value);
+    }
 </script>
 
 <svelte:head>
@@ -19,4 +17,8 @@
     <span class="prose text-center text-white">
         <h1 class="text-2xl prose text-white">Puzzled</h1>
     </span>
+    <div class="flex">
+        <button on:click={handle_click}>Add</button>
+        <span>{value}</span>
+    </div>
 </div>
