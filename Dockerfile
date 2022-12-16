@@ -41,7 +41,9 @@ FROM node:lts-alpine as runner
 COPY --chown=55 --from=builder /workspace/package.json ./dist/package.json
 COPY --chown=55 --from=builder /workspace/build ./dist/build
 COPY --chown=55 --from=builder /workspace/wasm/pkg ./dist/wasm
+
 VOLUME [ "/dist" ]
+WORKDIR /dist
 
 FROM runner
 
