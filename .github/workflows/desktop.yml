@@ -5,17 +5,16 @@ env:
 
 on:
   pull_request:
-    branches: [ "main", "master", "prod*" ]
     tags: [ "v*.*.*" ]
   push:
-    branches: [ "main", "master", "prod*" ]
     tags: [ "v*.*.*" ]
   workflow_dispatch:
     inputs:
-      environment:
-        description: 'Environment'
+      prerelease:
+        description: 'Would you like to release the assets as an official release?'
+        default: false
         required: true
-        type: environment
+        type: boolean
 
 jobs:
   constructor:
@@ -83,13 +82,14 @@ jobs:
         id: publish-release
         uses: actions/github-script@v6
         env:
+          prerelease: ${{ github.event.inputs.prerelease }}
           release_id: ${{ needs.constructor.outputs.release_id }}
         with:
           script: |
             github.rest.repos.updateRelease({
               configPath: 'desktop/tauri.conf.json',
               draft: false,
-              prerelease: true,
+              prerelease: process.env.prerelease,
               owner: context.repo.owner,
               release_id: process.env.release_id,
               repo: context.repo.repo
