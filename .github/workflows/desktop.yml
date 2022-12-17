@@ -75,8 +75,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           bundleIdentifier: eth.pzzld.app
-          distPath: ./build
+          distPath: './build'
           releaseId: ${{ needs.constructor.outputs.release_id }}
+          tagName: app-v__VERSION__
   pre-release:
     needs: [ builder, constructor ]
     runs-on: ubuntu-20.04
