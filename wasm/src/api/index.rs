@@ -11,9 +11,12 @@ pub fn landing() -> Result<(), JsError> {
     Ok(())
 }
 
-pub async fn etherscan(path: &str) -> Result<Response, Error> {
+#[wasm_bindgen]
+pub async fn etherscan(path: &str) -> Result<String, JsError> {
     let basepath = "https://api.etherscan.io/api";
     let endpoint = format!("{}/{}", basepath, path);
     let url = endpoint.as_str();
-    Ok( Request::get(url).send().await?)
+    let resp = Request::get(url).send().await?;
+    Ok(resp.text().await?)
 }
+
