@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       prerelease:
-        description: 'Would you like to release the assets as an official release?'
+        description: 'Release assets as a prelease?'
         default: false
         required: true
         type: boolean
