@@ -1,0 +1,24 @@
+[package]
+authors = ["FL03 <jo3mccain@icloud.com> (https://github.com/FL03)"]
+build = "build.rs"
+categories = []
+description = "pzzld-desktop"
+edition = "2021"
+keywords = ["pzzld"]
+license = "Apache-2.0"
+name = "pzzld-desktop"
+readme = "README.md"
+repository = "https://github.com/FL03/pzzld-eth-app"
+version = "0.1.0"
+
+[features]
+default = [ "custom-protocol" ]
+custom-protocol = [ "tauri/custom-protocol" ]
+
+[build-dependencies]
+tauri-build = { features = [], version = "1.2" }
+
+[dev-dependencies]
+
+[dependencies]
+tauri = {  features = ["api-all"], version = "1.2" }

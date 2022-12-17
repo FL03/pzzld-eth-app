@@ -2,7 +2,10 @@
 default-members = [
     "wasm"
 ]
-exclude = [ "xtask" ]
+exclude = [ 
+    "desktop", 
+    "xtask" 
+]
 members = [
     "wasm",
 ]

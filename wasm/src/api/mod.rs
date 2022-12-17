@@ -3,8 +3,9 @@
     Contrib: FL03 <jo3mccain@icloud.com>
     Description: ... Summary ...
 */
-pub use self::utils::*;
+pub use self::{index::*, utils::*};
 
+pub(crate) mod index;
 
 pub(crate) mod utils {
     use gloo::net::http::Request;

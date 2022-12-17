@@ -1,0 +1,4 @@
+
+
+[api]
+pattern = "https://api*.etherscan.io/api"
