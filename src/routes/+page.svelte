@@ -1,7 +1,6 @@
 <script>
     import { fetch, greet, add_one } from 'wasm/wasm';
-
-    let value = 0;
+    
     
 </script>
 
@@ -15,8 +14,7 @@
     <span class="prose text-center text-white">
         <h1 class="text-2xl prose text-white">Puzzled</h1>
     </span>
-    <div class="flex">
-        <button on:click={() => {add_one(value)}}>Add</button>
-        <span>{value}</span>
+    <div class="block ">
+        <button on:click={greet}>Alert</button>
     </div>
 </div>
