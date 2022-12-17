@@ -15,6 +15,6 @@
         <h1 class="text-2xl prose text-white">Puzzled</h1>
     </span>
     <div class="block ">
-        <button on:click={greet}>Alert</button>
+        <button on:click={() => {greet("Joe")}}>Alert</button>
     </div>
 </div>
