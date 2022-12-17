@@ -1,7 +1,13 @@
 <script>
+    import { onMount } from 'svelte';
+    import headerImage from '$lib/assets/media/abstractShapes.svg';
     import { fetch, greet, add_one } from 'wasm';
     
     let value = 0;
+
+    onMount(() => {
+        greet("Puzzled");
+    })
 </script>
 
 <svelte:head>
@@ -10,11 +16,10 @@
 </svelte:head>
 
 
-<div class="flex flex-auto items-center justify-center rounded">
-    <span class="prose text-center text-white">
-        <h1 class="text-2xl prose text-white">Puzzled</h1>
-    </span>
-    <div class="block ">
-        <button on:click={() => {greet("Joe")}}>Alert</button>
-    </div>
-</div>
+
+<span class="items-center justify-center text-center">
+    <img alt="#" class="mx-3 rounded" src={headerImage}/>
+    <h1 class="prose prose-invert prose-2xl">
+        Puzzled
+    </h1>
+</span>

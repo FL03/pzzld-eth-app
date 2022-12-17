@@ -60,7 +60,10 @@ jobs:
       - name: rust (stable)
         uses: dtolnay/rust-toolchain@stable
       - name: langspace
-        run: cargo xtask setup
+        run: |
+          rustup default nightly
+          rustup target add wasm32-unknown-unknown --toolchain nightly
+          npm install -g wasm-pack
       - name: configure environment (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
         run: |

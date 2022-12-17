@@ -17,8 +17,8 @@
 	<Navbar name={"Puzzled"}>
 		<WalletToggle/>
 	</Navbar>
-	<div class="flex flex-col grow items-center justify-center min-h-full max-h-screen min-w-full max-w-screen z-0" id="content-section">
-		<main class="bg-zinc-700 flex container mx-auto prose prose-invert rounded p-3">
+	<div class="flex flex-col grow items-center justify-center min-h-full max-h-screen min-w-full max-w-screen bg-white" id="content-section">
+		<main class="bg-zinc-700 flex grow container prose prose-invert rounded p-3">
 			<slot/>
 		</main>
 	</div>
