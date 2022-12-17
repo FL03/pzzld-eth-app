@@ -1,7 +1,7 @@
 <script>
-    import { fetch, greet, add_one } from 'wasm/wasm';
+    import { fetch, greet, add_one } from 'wasm';
     
-    
+    let value = 0;
 </script>
 
 <svelte:head>
