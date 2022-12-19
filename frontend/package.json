@@ -1,0 +1,47 @@
+{
+	"author": "FL03 <jo3mccain@icloud.com> (https://github.com/FL03)",
+	"bugs": "https://github.com/FL03/pzzld-eth-app/issues",	
+	"dependencies": {
+		"@ensdomains/ensjs": "latest",
+		"cookie": "latest",
+		"dotenv": "latest",
+		"svelte-web3": "latest"
+	},
+	"description": "Proton",
+	"devDependencies": {
+		"@bytemd/plugin-gfm": "latest",
+		"@fontsource/fira-mono": "latest",
+		"@neoconfetti/svelte": "latest",
+		"@sveltejs/adapter-node": "next",
+		"@sveltejs/adapter-vercel": "next",
+		"@sveltejs/kit": "next",
+		"@sveltejs/package": "next",
+		"@tailwindcss/forms": "latest",
+		"@tailwindcss/typography": "latest",
+		"autoprefixer": "latest",
+		"bytemd": "latest",
+		"svelte": "latest",
+		"svelte-check": "latest",
+		"svelte-preprocess": "latest",
+		"tailwindcss": "latest",
+		"vite": "^4.0.0",
+		"vite-plugin-wasm-pack": "latest"
+	},
+	"keywords": [],
+	"homepage": "https://github.com/FL03/pzzld-eth-app/wiki",
+	"license": "Apache-2.0",
+	"name": "@app/frontend",
+	"readme": "https://github.com/FL03/pzzld-eth-app/#README",
+  	"repository": "https://github.com/FL03/pzzld-eth-app",
+	"scripts": {
+		"build": "vite build",
+		"check": "svelte-kit sync && svelte-check",
+		"check:watch": "svelte-kit sync && svelte-check --watch",
+		"dev": "vite dev --port 3000",
+		"package": "svelte-kit package",
+		"preview": "vite preview --port 3000",
+		"start": "node build/index.js"
+	},
+	"type": "module",
+	"version": "0.1.0"
+}

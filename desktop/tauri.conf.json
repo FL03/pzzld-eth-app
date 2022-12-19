@@ -1,13 +1,13 @@
 {
   "package": {
-    "productName": "Proton",
+    "productName": "Puzzled",
     "version": "0.1.0"
   },
   "build": {
-    "devPath": "..",
-    "distDir": "../build",
-    "beforeDevCommand": "cargo xtask start",
-    "beforeBuildCommand": "cargo xtask compile",
+    "devPath": "../frontend",
+    "distDir": "../frontend/build",
+    "beforeDevCommand": "npm run build",
+    "beforeBuildCommand": "npm install",
     "withGlobalTauri": false
   },
   "tauri": {
