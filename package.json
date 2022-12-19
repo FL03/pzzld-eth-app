@@ -7,7 +7,7 @@
 		"dotenv": "latest",
 		"svelte-web3": "latest"
 	},
-	"description": "Proton",
+	"description": "pzzld-eth-app",
 	"devDependencies": {
 		"@bytemd/plugin-gfm": "latest",
 		"@fontsource/fira-mono": "latest",
@@ -31,7 +31,7 @@
 	"keywords": [],
 	"homepage": "https://github.com/FL03/pzzld-eth-app/wiki",
 	"license": "Apache-2.0",
-	"name": "pzzld.eth.app",
+	"name": "@pzzld/app",
 	"readme": "https://github.com/FL03/pzzld-eth-app/#README",
   	"repository": "https://github.com/FL03/pzzld-eth-app",
 	"scripts": {
