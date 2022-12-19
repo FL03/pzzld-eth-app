@@ -18,5 +18,4 @@ pub(crate) mod utils {
 
         Ok(resp.text().await?)
     }
-
 }

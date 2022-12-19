@@ -32,5 +32,5 @@ pub fn add_one(data: usize) -> usize {
 pub struct ERC721 {
     pub name: String,
     pub symbol: String,
-    pub total_supply: usize
+    pub total_supply: usize,
 }

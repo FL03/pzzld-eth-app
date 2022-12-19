@@ -31,15 +31,15 @@ RUN npm install && npm run build
 
 FROM builder as development
 
-ENV MODE="stag"
+ENV MODE="production"
 
 EXPOSE 3000
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "start" ]
 
 FROM node:lts-alpine as runner
 
 COPY --chown=55 --from=builder /workspace/package.json ./dist/package.json
-COPY --chown=55 --from=builder /workspace/frontend/build ./dist/build
+COPY --chown=55 --from=builder /workspace/build ./dist/build
 COPY --chown=55 --from=builder /workspace/wasm/pkg ./dist/wasm
 
 VOLUME [ "/dist" ]

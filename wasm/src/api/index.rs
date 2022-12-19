@@ -3,11 +3,13 @@
     Contrib: FL03 <jo3mccain@icloud.com>
     Description: ... Summary ...
 */
-use gloo::net::{Error, http::{Request, Response}};
+use gloo::net::{
+    http::{Request, Response},
+    Error,
+};
 use wasm_bindgen::prelude::*;
 
 pub fn landing() -> Result<(), JsError> {
-    
     Ok(())
 }
 
@@ -19,4 +21,3 @@ pub async fn etherscan(path: &str) -> Result<String, JsError> {
     let resp = Request::get(url).send().await?;
     Ok(resp.text().await?)
 }
-
