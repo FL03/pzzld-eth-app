@@ -9,6 +9,7 @@ pub use self::utils::*;
 extern crate cfg_if;
 extern crate wasm_bindgen;
 
+pub mod actors;
 pub mod api;
 
 pub(crate) mod utils;

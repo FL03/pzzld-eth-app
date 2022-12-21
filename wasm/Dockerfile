@@ -29,25 +29,7 @@ WORKDIR /workspace
 COPY . .
 RUN npm install && npm run build
 
-FROM builder as development
+FROM scratch as build
 
-ENV MODE="production"
-
-EXPOSE 3000
-CMD [ "npm", "run", "start" ]
-
-FROM node:lts-alpine as runner
-
-COPY --chown=55 --from=builder /workspace/package.json ./dist/package.json
-COPY --chown=55 --from=builder /workspace/build ./dist/build
-COPY --chown=55 --from=builder /workspace/wasm/pkg ./dist/wasm
-
+COPY --chown=55 --from=builder /workspace/pkg /dist/pkg
 VOLUME [ "/dist" ]
-WORKDIR /dist
-
-FROM runner
-
-ENV MODE="production"
-
-EXPOSE 3000
-CMD ["npm", "run", "start"]
