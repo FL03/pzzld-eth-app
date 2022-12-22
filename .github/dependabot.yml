@@ -16,6 +16,18 @@ updates:
     directory: /
     schedule:
         interval: daily
+  - package-ecosystem: npm
+    directory: /contracts
+    schedule:
+        interval: daily
+  - package-ecosystem: cargo
+    directory: /desktop
+    schedule:
+        interval: daily
+  - package-ecosystem: npm
+    directory: /frontend
+    schedule:
+        interval: daily
   - package-ecosystem: cargo
     directory: /wasm
     schedule:

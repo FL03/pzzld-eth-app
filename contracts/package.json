@@ -1,0 +1,17 @@
+{
+	"dependencies": {
+		"dotenv": "latest",
+		"ganache-cli": "latest",
+		"hardhat": "latest",
+		"truffle": "latest"
+	},
+	"license": "Apache-2.0",
+	"name": "@app/contracts",
+	"scripts": {
+		"build": "truffle compile",
+		"dev": "truffle develop",
+		"migrate": "truffle migrate",
+		"truffle": "truffle"
+	},
+	"type": "commonjs"
+}

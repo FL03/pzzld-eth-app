@@ -1,22 +1,33 @@
 /*
     Appellation: cli <module>
-    Contributors: FL03 <jo3mccain@icloud.com>
-    Description:
-        ... Summary ...
+    Contrib: FL03 <jo3mccain@icloud.com>
+    Description: ... Summary ...
 */
-pub use self::{commands::*, interface::*};
+pub use self::{args::*, commands::*, context::*};
 
+pub(crate) mod args;
 pub(crate) mod commands;
 
+use std::{sync::Arc, thread::JoinHandle};
+
+///
 pub fn new() -> CommandLineInterface {
     CommandLineInterface::default()
 }
+///
+pub fn handle() -> JoinHandle<Arc<CommandLineInterface>> {
+    let tmp = Arc::new(new());
+    std::thread::spawn(move || {
+        tmp.handler().expect("");
+        tmp
+    })
+}
 
-pub(crate) mod interface {
+pub(crate) mod context {
     use super::Commands;
-    use crate::BoxResult;
+    use anyhow::Result;
     use clap::Parser;
-    
+
     #[derive(Clone, Debug, Hash, Parser, PartialEq)]
     #[clap(about, author, version)]
     #[clap(long_about = None)]
@@ -25,21 +36,18 @@ pub(crate) mod interface {
         pub command: Option<Commands>,
         #[arg(action = clap::ArgAction::SetTrue, long, short)]
         pub debug: bool,
-        #[arg(action = clap::ArgAction::SetTrue, long)]
-        pub desktop: bool,
-        #[arg(action = clap::ArgAction::SetTrue, long, short)]
-        pub release: bool,
         #[arg(action = clap::ArgAction::SetTrue, long, short)]
         pub update: bool,
     }
 
     impl CommandLineInterface {
-        pub fn handler(&self) -> BoxResult<&Self> {
-            if self.debug {
-                
-            }
+        pub fn new() -> Self {
+            Self::parse()
+        }
+        pub fn handler(&self) -> Result<&Self> {
+            if self.debug {}
             if let Some(cmds) = &self.command {
-                cmds.handler(self.desktop.clone(), self.release.clone())?;
+                cmds.handler()?;
             }
             Ok(self)
         }

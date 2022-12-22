@@ -12,6 +12,6 @@ fn lib_compiles() {
 
 #[wasm_bindgen_test]
 fn greet_test() {
-    let a = greet("");
+    greet("");
     assert!(true);
 }

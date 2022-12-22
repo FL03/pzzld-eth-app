@@ -12,7 +12,7 @@ pub(crate) mod utils;
 pub mod cli;
 pub mod workspace;
 
-fn main() -> BoxResult {
+fn main() -> anyhow::Result<()> {
     tracing_subscriber::fmt::init();
 
     cli::new().handler()?;
