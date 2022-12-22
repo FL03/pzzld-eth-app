@@ -7,7 +7,7 @@
 </script>
 
 
-<aside class="absolute bg-zinc-700 text-white flex max-w-md w-full items-center justify-between h-full opacity-95 top-0 py-24 shadow-lg" class:open>
+<aside class="absolute bg-zinc-700 text-white flex max-w-md w-full items-center justify-between h-full opacity-95 top-0 py-24 shadow-lg drop-shadow" class:open>
     <div class="flex flex-col justify-between h-full w-full">
         <div class="flex items-center justify-center p-3">
            <ProfileCard/>

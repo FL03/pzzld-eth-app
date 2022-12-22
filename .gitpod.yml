@@ -1,5 +1,5 @@
 tasks:
   - init: |
       cp .env.example .env
-      cargo xtask setup
-    command: cargo xtask start
+      cargo xtask setup --extras
+    command: npm run dev

@@ -8,7 +8,11 @@
     <MenuBtn bind:open={open}/>
 </div> -->
 
-<button class="flex flex-initial rounded py-1 px-3 {bg} {color}" class:open on:click={() => open = !open}>
+<button 
+    class="flex flex-initial rounded py-1 px-3 {bg} {color}" 
+    class:open 
+    on:click={() => open = !open}
+>
     Controls
 </button>
 

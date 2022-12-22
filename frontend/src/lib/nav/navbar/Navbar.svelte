@@ -11,7 +11,6 @@
     {name}
   </NavLogo>
   <div class="flex grow items-center justify-start p-3" id="main-menu">
-    
     <Navlink links={links}/>
   </div>
   <div class="justify-end">

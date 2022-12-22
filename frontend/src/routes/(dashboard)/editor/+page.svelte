@@ -10,4 +10,4 @@
 </script>
 
 
-<Editor class="prose-xl prose-slate max-w-none" {plugins} {value} on:change={(e) => {value = e.detail.value}}/>
+<Editor class="prose prose-slate max-w-none" {plugins} {value} on:change={(e) => {value = e.detail.value}}/>

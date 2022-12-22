@@ -1,10 +1,5 @@
 <script>
-    import { fetch, greet, add_one } from 'wasm';
-    
-    let value = 0;
-    function handle_click() {
-        greet("Joe")
-    }
+
 </script>
 
 <svelte:head>
@@ -14,10 +9,7 @@
 
 
 <div class="flex flex-auto items-center justify-center rounded">
-    <span class="prose text-center text-white">
-        <h1 class="text-2xl prose text-white">Puzzled</h1>
+    <span class="prose text-center prose-invert">
+        <h1 class="prose prose-invert prose-2xl">Puzzled</h1>
     </span>
-    <div class="block ">
-        <button on:click={() => {}}>Alert</button>
-    </div>
 </div>
