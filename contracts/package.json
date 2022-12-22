@@ -11,6 +11,7 @@
 		"build": "truffle compile",
 		"dev": "truffle develop",
 		"migrate": "truffle migrate",
+		"test": "truffle test",
 		"truffle": "truffle"
 	},
 	"type": "commonjs"
