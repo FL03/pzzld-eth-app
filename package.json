@@ -28,7 +28,7 @@
 	"type": "module",
 	"version": "0.1.0",
 	"workspaces": [
-		"contracts",
+		"packages/*",
 		"frontend",
 		"wasm"
 	]

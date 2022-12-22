@@ -1,18 +1,9 @@
 {
-	"author": "FL03 <jo3mccain@icloud.com> (https://github.com/FL03)",
-	"bugs": "https://github.com/FL03/pzzld-eth-app/issues",	
-	"description": "pzzld-eth-app",
-	"keywords": [],
-	"homepage": "https://github.com/FL03/pzzld-eth-app/wiki",
-	"license": "Apache-2.0",
 	"name": "@app/wasm",
-	"readme": "https://github.com/FL03/pzzld-eth-app/#README",
-  	"repository": "https://github.com/FL03/pzzld-eth-app",
 	"scripts": {
 		"build": "wasm-pack build . --target web",
 		"preinstall": "npm install -g wasm-pack",
 		"test": "wasm-pack test --node ."
 	},
-	"type": "module",
-	"version": "0.1.0"
+	"type": "commonjs"
 }
