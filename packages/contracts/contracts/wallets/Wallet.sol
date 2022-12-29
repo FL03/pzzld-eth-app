@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity >=0.8.0 <0.9.0;
 
-import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
+// import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 
 /**
 * 
@@ -23,7 +23,7 @@ library WalletLib {
 * @notice Base interface for building wallets
 * @title IWallet
 */
-interface IWallet is IERC165 {
+interface IWallet {
     /**
     * @dev Emitted when a transaction reaches completion
     */
