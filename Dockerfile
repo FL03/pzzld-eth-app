@@ -10,6 +10,7 @@ RUN apt-get install -y \
     git \
     llvm \
     wget
+
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 ENV PATH="/root/.cargo/bin:${PATH}"
@@ -36,16 +37,7 @@ ENV MODE="stag"
 EXPOSE 3000
 CMD [ "npm", "run", "dev" ]
 
-FROM node:lts-alpine as runner
-
-COPY --chown=55 --from=builder /workspace/package.json ./dist/package.json
-COPY --chown=55 --from=builder /workspace/frontend/build ./dist/build
-COPY --chown=55 --from=builder /workspace/wasm/pkg ./dist/wasm
-
-VOLUME [ "/dist" ]
-WORKDIR /dist
-
-FROM runner
+FROM builder as production
 
 ENV MODE="production"
 
