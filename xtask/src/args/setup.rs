@@ -26,7 +26,7 @@ impl Setup {
         };
         Ok(self)
     }
-    fn commands(&self) -> Result<&Self> {
+    fn langspace(&self) -> Result<&Self> {
         command("rustup", vec!["default", "nightly"])?;
         command(
             "rustup",
@@ -39,6 +39,7 @@ impl Setup {
                 "nightly",
             ],
         )?;
+        command("npm", vec!["install", "-g", "ganache-cli", "hardhat", "truffle", "wasm-pack"])?;
         if self.extras {
             command(
                 "rustup",
@@ -51,13 +52,13 @@ impl Setup {
                     "nightly",
                 ],
             )?;
-            command("npm", vec!["install", "-g", "ganache-cli", "hardhat", "truffle", "wasm-pack"])?;
         };
         Ok(self)
     }
     pub fn handler(&self) -> Result<&Self> {
         tracing::info!("Setting up the workspace...");
-        self.setup_artifacts()?.commands()?;
+        self.setup_artifacts()?.langspace()?;
+        command("npm", vec!["install"])?;
         Ok(self)
     }
 }
