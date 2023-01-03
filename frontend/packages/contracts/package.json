@@ -2,7 +2,9 @@
 	"dependencies": {
 		"@openzeppelin/contracts": "latest",
 		"@openzeppelin/contracts-upgradeable": "latest",
-		"dotenv": "latest",
+		"dotenv": "latest"
+	},
+	"devDependencies": {
 		"ganache-cli": "latest",
 		"hardhat": "latest",
 		"truffle": "latest"

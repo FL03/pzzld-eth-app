@@ -24,8 +24,7 @@
 		"svelte-check": "latest",
 		"svelte-preprocess": "latest",
 		"tailwindcss": "latest",
-		"vite": "^4.0.0",
-		"vite-plugin-wasm-pack": "latest"
+		"vite": "^4.0.0"
 	},
 	"keywords": [],
 	"homepage": "https://github.com/FL03/pzzld-eth-app/wiki",
@@ -34,14 +33,17 @@
 	"readme": "https://github.com/FL03/pzzld-eth-app/#README",
   	"repository": "https://github.com/FL03/pzzld-eth-app",
 	"scripts": {
-		"build": "vite build",
+		"build": "npm run contracts:build && vite build",
 		"check": "svelte-kit sync && svelte-check",
 		"check:watch": "svelte-kit sync && svelte-check --watch",
 		"dev": "vite dev --host --port 3000",
 		"package": "svelte-kit package",
-	
+		"prestart": "npm run contracts:build",
 		"preview": "vite preview --host --port 3000",
-		"start": "node build/index.js"
+		"start": "node build/index.js",
+		"contracts:build": "npm run build --workspace=@app/contracts",
+		"contracts:dev": "npm run dev --workspace=@app/contracts",
+		"contracts:install": "npm install --workspace=@app/contracts"
 	},
 	"type": "module",
 	"version": "0.1.0",

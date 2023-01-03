@@ -1,9 +1,7 @@
 # pzzld-eth-app
 
-[![Clippy](https://github.com/FL03/pzzld-eth-app/actions/workflows/clippy.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/clippy.yml)
 [![Desktop](https://github.com/FL03/pzzld-eth-app/actions/workflows/desktop.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/desktop.yml)
 [![Docker](https://github.com/FL03/pzzld-eth-app/actions/workflows/docker.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/docker.yml)
-[![Rust](https://github.com/FL03/pzzld-eth-app/actions/workflows/rust.yml/badge.svg)](https://github.com/FL03/pzzld-eth-app/actions/workflows/rust.yml)
 
 ***
 

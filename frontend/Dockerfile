@@ -1,3 +1,11 @@
+FROM trufflesuite/ganache-cli
+
+ADD . /workspace
+WORKDIR /workspace
+
+COPY . .
+RUN npm run 
+
 FROM node:18.12.1 as base
 
 RUN apt-get update -y && apt-get upgrade -y

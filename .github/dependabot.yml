@@ -28,11 +28,3 @@ updates:
     directory: /frontend/packages/contracts
     schedule:
         interval: daily
-  - package-ecosystem: cargo
-    directory: /frontend/packages/wasm
-    schedule:
-        interval: daily
-  - package-ecosystem: npm
-    directory: /frontend/packages/wasm
-    schedule:
-        interval: daily

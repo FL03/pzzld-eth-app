@@ -1,9 +1,0 @@
-{
-	"name": "@app/wasm",
-	"scripts": {
-		"build": "wasm-pack build . --target web",
-		"preinstall": "npm install -g wasm-pack",
-		"test": "wasm-pack test --node ."
-	},
-	"type": "commonjs"
-}
