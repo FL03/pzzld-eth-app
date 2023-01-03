@@ -1,14 +1,13 @@
 [workspace]
 default-members = [
-    "wasm"
+    "frontend/packages/wasm"
 ]
 exclude = [ 
-    "desktop", 
-    "xtask" 
+    "desktop",
+    "xtask",
 ]
 members = [
-    # "xtask",
-    "wasm",
+    "frontend/packages/wasm"
 ]
 
 [profile.dev]

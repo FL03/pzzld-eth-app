@@ -24,11 +24,15 @@ updates:
     directory: /frontend
     schedule:
         interval: daily
+  - package-ecosystem: npm
+    directory: /frontend/packages/contracts
+    schedule:
+        interval: daily
   - package-ecosystem: cargo
-    directory: /wasm
+    directory: /frontend/packages/wasm
     schedule:
         interval: daily
   - package-ecosystem: npm
-    directory: /frontend/packages/contracts
+    directory: /frontend/packages/wasm
     schedule:
         interval: daily
