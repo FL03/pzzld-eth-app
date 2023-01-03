@@ -19,11 +19,15 @@ FROM builder as development
 ENV MODE="production"
 
 EXPOSE 3000
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "start" ]
 
-FROM node:18.12.1-slim
+# FROM node:18.12.1-slim
 
-COPY --from=builder /workspace/build /app
-COPY --from=builder /workspace/packages/contracts/build /app/contracts
+# COPY --from=builder /workspace/build /app/build
+# COPY --from=builder /workspace/package.json /app/package.json
+# COPY --from=builder /workspace/packages/contracts /app/packages/contracts
 
-CMD [ "node", "app/index.js"]
+# WORKDIR /app
+
+# EXPOSE 3000
+# CMD ["node", "build/index.js"]
