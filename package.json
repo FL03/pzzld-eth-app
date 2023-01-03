@@ -9,11 +9,9 @@
 	"readme": "https://github.com/FL03/pzzld-eth-app/#README",
   	"repository": "https://github.com/FL03/pzzld-eth-app",
 	"scripts": {
-		"build": "npm run contracts:build && npm run client:build",
-		"dev": "npm run contracts:build && npm run client:dev",
-		"prestart": "npm run build",
+		"build": "npm run client:build",
+		"dev": "npm run client:dev",
 		"start": "npm run client:start",
-		"test": "npm run wasm:test",
 		"client:build": "npm run build --workspace=@app/frontend",
 		"client:dev": "npm run dev --workspace=@app/frontend",
 		"client:install": "npm install --workspace=@app/frontend",

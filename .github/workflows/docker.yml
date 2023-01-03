@@ -12,7 +12,6 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: jo3mccain/pzzld-eth-app
   IMAGE_TAG: latest
 
 jobs:
@@ -21,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker buildx build --tag ${{ env.IMAGE }} .
+        run: docker buildx build --tag ${{ secrets.DOCKERHUB_USERNAME }}/pzzld-eth-app frontend
   publish:
     needs: build
     runs-on: ubuntu-latest
@@ -30,10 +29,10 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v5
       with:
-        dockerfile: Dockerfile
-        name: ${{ env.IMAGE }}
+        dockerfile: frontend/Dockerfile
+        name: ${{ secrets.DOCKERHUB_USERNAME }}/pzzld-eth-app
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         snapshot: true
-        tags: latest
+        tags: frontend
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         
