@@ -4,6 +4,11 @@
 		"@openzeppelin/contracts-upgradeable": "latest",
 		"dotenv": "latest"
 	},
+	"devDependencies": {
+		"ganache-cli": "latest",
+		"hardhat": "latest",
+		"truffle": "latest"
+	},
 	"license": "Apache-2.0",
 	"name": "@app/contracts",
 	"scripts": {
