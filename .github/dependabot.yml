@@ -1,9 +1,5 @@
 version: 2
 updates:
-  - package-ecosystem: cargo
-    directory: /
-    schedule:
-        interval: daily
   - package-ecosystem: docker
     directory: /
     schedule:
@@ -16,15 +12,7 @@ updates:
     directory: /
     schedule:
         interval: daily
-  - package-ecosystem: cargo
-    directory: /desktop
-    schedule:
-        interval: daily
   - package-ecosystem: npm
     directory: /frontend
-    schedule:
-        interval: daily
-  - package-ecosystem: npm
-    directory: /frontend/packages/contracts
     schedule:
         interval: daily

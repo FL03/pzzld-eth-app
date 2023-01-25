@@ -12,18 +12,14 @@
 		"build": "npm run client:build",
 		"dev": "npm run client:dev",
 		"start": "npm run client:start",
-		"client:build": "npm run build --workspace=@app/frontend",
-		"client:dev": "npm run dev --workspace=@app/frontend",
-		"client:install": "npm install --workspace=@app/frontend",
-		"client:start": "npm run start --workspace=@app/frontend",
-		"contracts:build": "npm run build --workspace=@app/contracts",
-		"contracts:dev": "npm run dev --workspace=@app/contracts",
-		"contracts:install": "npm install --workspace=@app/contracts"
+		"client:build": "npm run build --workspace=@app/client",
+		"client:dev": "npm run dev --workspace=@app/client",
+		"client:install": "npm install --workspace=@app/client",
+		"client:start": "npm run start --workspace=@app/client"
 	},
 	"type": "module",
 	"version": "0.1.0",
 	"workspaces": [
-		"frontend/packages/*",
-		"frontend"
+		"client"
 	]
 }
