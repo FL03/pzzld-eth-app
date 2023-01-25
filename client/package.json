@@ -31,6 +31,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --watch",
 		"dev": "vite dev --host --port 3000",
 		"package": "svelte-kit package",
+		"prestart": "vite build",
 		"preview": "vite preview --host --port 3000",
 		"start": "node build/index.js"
 	},

@@ -11,7 +11,7 @@ pzzld-eth-app
 
 ### Building from the Source
 
-Make sure you have rust installed on your host system
+Make sure you have nodejs installed on your host system
 
 #### *Clone the repository*
 
@@ -22,13 +22,14 @@ git clone https://github.com/FL03/pzzld-eth-app
 #### *Setup the environment*
 
 ```bash
-cargo xtask setup
+npm install
+npm run build
 ```
 
 #### *Start the application*
 
 ```bash
-cargo xtask start
+npm run start
 ```
 
 ### Docker
@@ -51,14 +52,6 @@ docker buildx build --tag pzzld-eth-app:latest .
 
 ```bash
 docker run -p 3000:3000 jo3mccain/pzzld-eth-app:latest
-```
-
-## Usage
-
-### Builder (xtask)
-
-```bash
-    cargo xtask -h 
 ```
 
 ## Contributors
