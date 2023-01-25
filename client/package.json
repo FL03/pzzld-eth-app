@@ -1,4 +1,6 @@
 {
+	"author": "FL03 <jo3mccain@icloud.com> (https://github.com/FL03)",
+	"bugs": "https://github.com/FL03/pzzld-eth-app/issues",
 	"dependencies": {
 		"@ensdomains/ensjs": "latest",
 		"@notionhq/client": "latest",
@@ -6,6 +8,7 @@
 		"dotenv": "latest",
 		"svelte-web3": "latest"
 	},
+	"description": "pzzld-eth-app",
 	"devDependencies": {
 		"@bytemd/plugin-gfm": "latest",
 		"@fontsource/fira-mono": "latest",
@@ -24,7 +27,12 @@
 		"tailwindcss": "latest",
 		"vite": "beta"
 	},
+	"keywords": [],
+	"homepage": "https://github.com/FL03/pzzld-eth-app/wiki",
+	"license": "Apache-2.0",
 	"name": "@app/client",
+	"readme": "https://github.com/FL03/pzzld-eth-app/#README",
+	"repository": "https://github.com/FL03/pzzld-eth-app",
 	"scripts": {
 		"build": "vite build",
 		"check": "svelte-kit sync && svelte-check",
@@ -35,5 +43,6 @@
 		"preview": "vite preview --host --port 3000",
 		"start": "node build/index.js"
 	},
-	"type": "module"
+	"type": "module",
+	"version": "0.1.0"
 }
