@@ -24,6 +24,7 @@
 		"tailwindcss": "latest",
 		"vite": "beta"
 	},
+	"name": "@app/client",
 	"scripts": {
 		"build": "vite build",
 		"check": "svelte-kit sync && svelte-check",

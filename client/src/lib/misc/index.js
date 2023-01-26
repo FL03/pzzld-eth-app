@@ -1,4 +1,4 @@
-import { Hamburger } from './hamburger';
-import { Logo } from './logo';
+import { Hamburger } from './hamburger.js';
+import { Logo } from './logo.js';
 
 export { Hamburger, Logo }
