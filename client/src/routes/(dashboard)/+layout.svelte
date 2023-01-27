@@ -1,11 +1,8 @@
 <script>
+    import { info } from '$lib/constants.js';
     import { Navbar, Sidebar, Toolbar, WalletToggle } from '$lib';
     import { connected } from 'svelte-web3';
 
-    let linktree = [ 
-		{ href: '/editor', label: 'Editor'},
-		{ href: '/settings', label: 'Settings'}
-	];
     let open = false;
 </script>
 
@@ -13,7 +10,7 @@
 	Control Center
 </Sidebar>
 
-<Navbar name={"Puzzled"}>
+<Navbar name={info.title}>
     <WalletToggle/>
 </Navbar>
 <div class="flex flex-col grow items-center justify-center min-h-full max-h-screen min-w-full max-w-screen z-0" id="content-section">
@@ -24,11 +21,11 @@
     </main>
 </div>
 <Toolbar 
-    linktree={linktree} 
+    linktree={info.sitemap.dashboard.links} 
     bind:sidebar={open}
 />
 
 <style>
-
+    
     
 </style>
