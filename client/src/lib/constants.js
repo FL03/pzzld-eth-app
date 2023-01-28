@@ -16,22 +16,16 @@ export let metadata = {
 
     social: {
         discord: '',
-        github: '',
-        linkedin: '',
-        twitter: ''
+        github: 'FL03',
+        linkedin: 'joe-mccain-iii',
+        twitter: 'jo3mccain'
     }
 }
-
-const pager = (href, label) => {
-    return {
-        href: href,
-        label: label
-    }
-} 
 
 export let info = {
     description: '',
     homepage: '/',
+    metadata: metadata,
     name: 'Puzzled',
     slug: 'pzzld',
     tags: [],

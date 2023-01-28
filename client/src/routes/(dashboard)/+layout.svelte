@@ -10,7 +10,7 @@
 	Control Center
 </Sidebar>
 
-<Navbar name={info.title}>
+<Navbar name={info.name}>
     <WalletToggle/>
 </Navbar>
 <div class="flex flex-col grow items-center justify-center min-h-full max-h-screen min-w-full max-w-screen z-0" id="content-section">

@@ -16,7 +16,7 @@
 
 </script>
 
-<div class="flex flex-col rounded-lg {align.items} {align.justify} {bg} {color} {dim.h} {dim.w} {dim.z} {m} {pd} {props}">
+<div class="card rounded-lg {align.items} {align.justify} {bg} {color} {dim.h} {dim.w} {dim.z} {m} {pd} {props}">
     <div class="flex min-h-full max-h-screen min-w-full max-w-screen p-3">
         <slot/>
     </div> 
@@ -26,5 +26,8 @@
 
 
 <style>
-    
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
 </style>
