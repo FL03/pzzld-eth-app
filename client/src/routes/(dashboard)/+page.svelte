@@ -7,9 +7,10 @@
 	<meta name="description" content="Welcome my dApp" />
 </svelte:head>
 
+<div class="flex flex-col">
+    <h1 class="flex prose prose-invert prose-2xl">Puzzled</h1>
 
-<div class="flex flex-auto items-center justify-center rounded">
-    <span class="prose text-center prose-invert">
-        <h1 class="prose prose-invert prose-2xl">Puzzled</h1>
+    <span class="flex prose prose-invert">
+        Welcome to Puzzled, a platform where puzzles come to life!
     </span>
 </div>

@@ -18,7 +18,7 @@
             <ul class="flex grow items-center justify-start list-none hidden lg:flex">
                 {#each linktree as view}
                     <li class:active={$page.url.pathname === view.href}>
-                        <a class="flex px-3 py-2 hover:opacity-75 hover:italic hover:underline" sveltekit:prefetch href="{view.href}">
+                        <a class="px-3 hover:opacity-75 hover:italic hover:underline" sveltekit:prefetch href="{view.href}">
                             {view.label}
                         </a>
                     </li>
