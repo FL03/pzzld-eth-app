@@ -12,7 +12,7 @@ export let theme = {
     link: "flex flex-initial overflow-y-clip hover:underline px-3 py-2 hover:opacity-75 text-white"
 }
 
-export let metadata = {
+let metadata = {
 
     social: {
         discord: '',
